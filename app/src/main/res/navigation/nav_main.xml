@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.smith.light.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/chooseTestament"
+            app:destination="@id/ChooseTestamentFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/ChooseTestamentFragment"
+        android:name="com.smith.light.ui.testaments.TestamentTypeFragment"
+        android:label="fragment_testament_type"
+        tools:layout="@layout/fragment_testament_type">
+        <action
+            android:id="@+id/action_testamentTypeFragment_to_booksFragment"
+            app:destination="@id/booksFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/booksFragment"
+        android:name="com.smith.light.ui.books.BooksFragment"
+        android:label="fragment_books"
+        tools:layout="@layout/fragment_books">
+        <action
+            android:id="@+id/action_booksFragment_to_verseFragment"
+            app:destination="@id/verseFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <argument
+            android:name="testamentType"
+            android:defaultValue="NEW_TESTAMENT"
+            app:argType="com.smith.light.navigation.TestamentSafeArgs" />
+    </fragment>
+    <fragment
+        android:id="@+id/verseFragment"
+        android:name="com.smith.light.ui.verses.VerseFragment"
+        android:label="fragment_verse"
+        tools:layout="@layout/fragment_verse">
+
+        <argument
+            android:name="verseId"
+            app:argType="integer" />
+        <argument
+            android:name="bookName"
+            app:argType="string" />
+        <argument
+            android:name="testamentType"
+            android:defaultValue="NEW_TESTAMENT"
+            app:argType="com.smith.light.navigation.TestamentSafeArgs" />
+    </fragment>
+</navigation>

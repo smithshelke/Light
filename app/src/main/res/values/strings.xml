@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Light</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="testament_view">Testament view</string>
+    <string name="old_testament_desc">The Hebrew canon, or Old Testament, refers to the collection of Hebrew (and some Aramaic) books that were recognized as Scripture in ancient Israel.</string>
+    <string name="new_testament_desc">The New Testament is a continuation of the entire Bible so far. The New Testament tells the story of that long awaited Messiah, Jesus.</string>
+    <string name="daily_verse">Daily Verse</string>
+    <string name="continue_reading">Continue reading…</string>
+    <string name="dummy_title">The spectacle before us was indeed sublime.</string>
+    <string name="dummy_body">Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</string>
+    <string name="dummy_verse">1 : 1 Genesis</string>
+    <string name="light">Light</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="new_testament">New Testament</string>
+    <string name="old_testament">Old Testament</string>
+    <string name="dummy_chapter">Genesis</string>
+    <string name="enter_reference">Enter reference</string>
+</resources>
