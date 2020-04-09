@@ -11,9 +11,9 @@ class SearchSheetBehaviour <T : View>(context: Context, attrs: AttributeSet?) :
     BottomSheetBehavior<T>(context, attrs) {
 
     override fun onTouchEvent(parent: CoordinatorLayout, child: T, event: MotionEvent): Boolean {
-        if (event.x < child.translationX) {
+      /*  if (event.x < child.translationX) {
             return false
-        }
+        }*/
         return false
     }
 }
