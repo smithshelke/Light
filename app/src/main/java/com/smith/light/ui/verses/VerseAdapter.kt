@@ -4,9 +4,11 @@ import android.annotation.SuppressLint
 import android.os.Build
 import android.text.Html
 import android.util.TypedValue
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.PopupMenu
 import androidx.core.content.ContextCompat
 import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
@@ -66,12 +68,22 @@ class VerseAdapter(
                             Html.fromHtml(verse?.verse ?: "", Html.FROM_HTML_MODE_COMPACT)
                     }
                     container.setOnClickListener {
+                        showMenu(it)
                         onVerseSelectedListener.onVerseSelected(position)
                     }
                     executePendingBindings()
                 }
             }
         }
+    }
+
+    private fun showMenu(anchor: View) {
+       /* val popup = PopupMenu(anchor.context, anchor)
+        popup.gravity = Gravity.END
+        popup.menuInflater.inflate(R.menu.verse_popup_menu, popup.menu)
+        popup.show()*/
+        val popup = VersePopupWindow(anchor.context)
+        popup.show(anchor)
     }
 
     fun setHighlight(position: Int) {
@@ -82,7 +94,9 @@ class VerseAdapter(
 
         class VerseDetailsViewHolder(
             val binding: ItemVerseBinding
-        ) : VerseViewHolder(binding.root)
+        ) : VerseViewHolder(binding.root) {
+
+        }
     }
 
     interface OnVerseSelectedListener {

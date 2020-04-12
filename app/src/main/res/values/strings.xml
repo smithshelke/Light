@@ -12,13 +12,11 @@
     <string name="dummy_verse">1 : 1 Genesis</string>
     <string name="light">Light</string>
     <string name="title_activity_splash_screen">SplashScreen</string>
-    <!--
-    This string is used for square devices and overridden by hello_world in
-    values-round/strings.xml for round devices.
-    -->
     <string name="hello_world">Hello Square World!</string>
     <string name="new_testament">New Testament</string>
     <string name="old_testament">Old Testament</string>
     <string name="dummy_chapter">Genesis</string>
     <string name="enter_reference">Enter reference</string>
+    <string name="mark_favourite">Mark Favourite</string>
+    <string name="highlight">Highlight Text</string>
 </resources>
